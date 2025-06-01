@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>غسق عمار</title>
   <style>
-    /* أسس التصميم العام */
+    /* تنسيقات عامة */
     body, html {
       margin: 0;
       padding: 0;
@@ -14,12 +14,15 @@
       background: #f4f4f4;
       color: #333;
     }
+
+    /* الهيدر */
     header {
-      background: #2B579A; /* اعتماد اللون الأزرق كتمثيل لبرنامج Word */
+      background: #2B579A;
       padding: 15px;
       text-align: center;
       color: white;
     }
+
     nav ul {
       list-style: none;
       padding: 0;
@@ -28,11 +31,19 @@
       gap: 20px;
       margin: 0;
     }
+
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+      color: #ffd700;
+    }
+
+    /* الأقسام */
     section {
       padding: 40px 20px;
       margin: 20px;
@@ -40,47 +51,61 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    /* قسم النبذة */
+
     #about {
       min-height: 50vh;
     }
-/* قسم المشاريع */
-.project-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    height: auto; /* السماح للارتفاع بالتكيف مع المحتوى */
-    margin: auto;
-    flex-wrap: wrap; /* جعل العناصر تلتف وتبقى داخل القسم */
-}
 
-.project-container a {
-    display: inline-block;
-    text-align: center;
-}
+    /* المشاريع */
+    .project-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin: auto;
+      flex-wrap: wrap;
+    }
 
-.project-container img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-    /* قسم التواصل */
+    .project-container a {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .project-container img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* التواصل */
     #contact {
       text-align: center;
     }
-   
+
+    /* استجابة للجوال */
+    @media (max-width: 600px) {
+      .project-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project-container img {
+        width: 90%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>غسق عمار بورتفوليو </h1>
+    <h1>غسق عمار بورتفوليو</h1>
     <nav>
       <ul>
         <li><a href="#about">نبذة</a></li>
@@ -89,11 +114,8 @@
       </ul>
     </nav>
   </header>
-  
 
-
-  <!-- قسم النبذة -->
-
+  <!-- نبذة -->
   <section id="about">
     <h2>نبذة عني</h2>
     <ul>
@@ -102,63 +124,59 @@
         <ul>
           <li>أبرع في إنشاء وتحرير الوثائق الرسمية بتنسيق احترافي.</li>
           <li>أوظف أدوات التدقيق اللغوي والقوالب الجاهزة لضمان الاتساق والدقة.</li>
-          <li>أعمل على تحسين جودة المستندات عبر استخدام تنسيقات فريدة ومبتكرة تلائم الرسائل المطلوبة.</li>
+          <li>أعمل على تحسين جودة المستندات عبر استخدام تنسيقات فريدة ومبتكرة.</li>
         </ul>
       </li>
       <li>
-        <strong>تحليل البيانات وإنشاء الجداول (Excel):</strong>
+        <strong>تحليل البيانات (Excel):</strong>
         <ul>
-          <li>أستخدم Excel لتحليل البيانات وإعداد التقارير التفصيلية باستخدام الجداول المحورية والصيغ الحسابية المعقدة.</li>
-          <li>أبدع في تصميم الرسوم البيانية التفاعلية التي تسهّل فهم المعلومات وتحليلها.</li>
-          <li>أعمل على تنظيم البيانات بطريقة منطقية تتيح استخراج النتائج بفعالية وسرعة.</li>
+          <li>أستخدم Excel لتحليل البيانات باستخدام الجداول المحورية والصيغ المتقدمة.</li>
+          <li>أصمم رسومًا بيانية تفاعلية لفهم البيانات بشكل أعمق.</li>
         </ul>
       </li>
       <li>
-        <strong>إبداع العروض التقديمية (PowerPoint):</strong>
+        <strong>العروض التقديمية (PowerPoint):</strong>
         <ul>
-          <li>أصمم عروض تقديمية جذابة باستخدام تصميمات متقنة وألوان مميزة تنقل الأفكار بفعالية.</li>
-          <li>أدمج بين النصوص والوسائط المتعددة لتقديم محتوى يلفت الانتباه ويثير الحماس.</li>
-          <li>أحرص على استخدام تأثيرات سلسة ونمط متناسق في شرائح العروض لضمان تجربة تفاعلية مميزة.</li>
+          <li>أصمم عروضًا جذابة بألوان متناسقة وتأثيرات سلسة.</li>
+          <li>أدمج النصوص والوسائط المتعددة لإيصال الأفكار بفعالية.</li>
         </ul>
       </li>
       <li>
-        <strong>السعي المستمر للتطوير:</strong>
+        <strong>تطوير الذات:</strong>
         <ul>
-          <li>أتابع أحدث التقنيات والطرق المبتكرة في مجال برامج الأوفيس لتعزيز كفاءتي.</li>
-          <li>أعمل على تحسين مهاراتي التحليلية والإبداعية عبر الدورات التدريبية والمشاريع العملية.</li>
-          <li>أطمح لتطبيق استنباط حلول تكنولوجية متطورة تُبرز قدراتي وتساهم في تحقيق نتائج فعّالة في مجال التقنية.</li>
+          <li>أتابع أحدث التقنيات والمهارات في برامج الأوفيس.</li>
+          <li>أطور نفسي من خلال التدريب العملي والمشاريع الحقيقية.</li>
         </ul>
       </li>
     </ul>
   </section>
 
-
-  <!-- قسم المشاريع -->
+  <!-- المشاريع -->
   <section id="projects">
     <h2>المشاريع</h2>
     <div class="project-container">
       <a href="word.html">
-        <img src="word/logo.png" alt="مشروع Word">
+        <img src="word/logo.png" alt="مشروع Word" />
         <p>مشروع Word</p>
       </a>
       <a href="excel.html">
-        <img src="excel/excel.png" alt="مشروع Excel">
+        <img src="excel/excel.png" alt="مشروع Excel" />
         <p>مشروع Excel</p>
       </a>
       <a href="powerpoint.html">
-        <img src="powerpoint/logo.jpg" alt="مشروع PowerPoint">
+        <img src="powerpoint/logo.jpg" alt="مشروع PowerPoint" />
         <p>مشروع PowerPoint</p>
       </a>
     </div>
   </section>
 
-  <!-- قسم التواصل -->
+  <!-- التواصل -->
   <section id="contact">
     <h2>التواصل</h2>
-    <p>
-      البريد الإلكتروني: <a href="mailto:duskamar1972@gmail.com">duskamar1972@gmail.com</a>
-    </p>
+    <p>البريد الإلكتروني: <a href="mailto:duskamar1972@gmail.com">duskamar1972@gmail.com</a></p>
   </section>
- <script src="script.js"></script>
+
+  <!-- سكربت (إن وجد) -->
+  <script src="script.js"></script>
 </body>
 </html>
